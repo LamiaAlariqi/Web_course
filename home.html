@@ -3,112 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
     <title>Lam</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <!------------------------head--------------------------------- -->
-    <header >
-    <nav class="nav">
-        <div class="img1">
-            <img src="./logo.jpg" height="60px" width="70px">
-        </div>
-            <ul class="itemlists">
-                <li> <a href="#">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">contact Us</a></li>
-                <li><a href="./services.html"> Services</a></li>
+
+<!-- ================= Navbar ================= -->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-3">
+        <a class="navbar-brand" href="#">
+            <img src="./logo.jpg" alt="Logo" height="30" width="40" class="rounded">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav  mb-2 mb-lg-0 ">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
             </ul>
-       
-        <div class="button">
-             <button><a href="login.html">Login</a></button>
+            <a href="login.html" class="btn btn-dark">Login</a>
         </div>
     </nav>
-     </header>
-<!------------------------------Body------------------------------->
-<img src="./background.png" class="background">
-     <div class="head1">
-        <h1 >
-             Maximize your productivity <br> <div class="p">with focus flow </div>
-        </h1>
-        </div>
-    <div class="content2">
-    <button class="button1">Download Now</button>
-    <br>
-    <h1 class="header">Our Services</h1>
-    <h3>Expert solutions tailored to your needs.</h3>
-     </div>
-<section class="features">
-    <div class="feature-card">
-      <img src="./mark.jpg"  class="icon">
-      <div class="title">
-      <h3>Consulting Services</h3>
-      <p>Our consulting services provide insightful analysis and strategic direction to help your business thrive in a competitive marketplace.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <img src="./jak.jpg"  class="icon">
-       <div class="title">
-      <h3>Technology Solutions</h3>
-      <p>We offer a range of technology solutions designed to enhance operational efficiency and drive growth through innovation.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <img src="./yafa.jpg"  class="icon">
-       <div class="title">
-      <h3>Training Programs</h3>
-      <p>Our training programs equip your team with the skills and knowledge necessary to excel in their roles and foster a culture of continuous improvement</p>
-        </div>
-    </div>
-  </section>
-  <section class="features">
-    <div class="feature-card">
-      <img src="./dev.jpg"  class="icon">
-      <div class="title">
-      <h3>Consulting Services</h3>
-      <p>Our consulting services provide insightful analysis and strategic direction to help your business thrive in a competitive marketplace.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <img src="./lora.jpg"  class="icon">
-       <div class="title">
-      <h3>Technology Solutions</h3>
-      <p>We offer a range of technology solutions designed to enhance operational efficiency and drive growth through innovation.</p>
-      </div>
-    </div>
-    <div class="feature-card">
-      <img src="./yafa.jpg"  class="icon">
-       <div class="title">
-      <h3>Training Programs</h3>
-      <p>Our training programs equip your team with the skills and knowledge necessary to excel in their roles and foster a culture of continuous improvement</p>
-        </div>
-    </div>
-  </section>
-<!----------------------------Footer --------------------------------------->
-<footer class="modern-footer">
-    <div class="pre-footer-cta">
-        <h2 class="cta-headline">Ready to Maximize Your Productivity?</h2>
-        <p class="cta-subtext">Join thousands of users achieving ultimate focus today.</p>
-        <button class="cta-button">Start Your Free Trial</button>
-    </div>
+</header>
 
-    <div class="base-footer">
-        
-        <div class="footer-brand">
-            <p class="logo-text">Lam</p>
-            <p class="copyright">© 2024 Lam. All Rights Reserved.</p>
-        </div>
+<!-- ================= Hero Section ================= -->
+<div class="container text-center my-5">
+    <img src="./background.png" class="img-fluid w-25 mb-3" alt="Background">
 
-        <div class="footer-utilities">
-            <div class="social-icons">
-                <a href="URL_X" target="_blank">X (Twitter)</a>
-                <a href="URL_LinkedIn" target="_blank">LinkedIn</a>
-                <a href="mailto:info@lam.com">Contact Us</a>
-                 <a href="/privacy">Privacy Policy</a>
-                  <a href="/terms">Terms of Use</a>
+    <h1>Maximize your productivity</h1>
+    <h3 class="fw-light">with focus flow</h3>
+    <button class="btn btn-dark mt-3">Download Now</button>
+</div>
+
+<!-- ================= Services / Features ================= -->
+<div class="container my-5">
+    <h2 class="text-center mb-4">Our Services</h2>
+    <h5 class="text-center mb-5">Expert solutions tailored to your needs.</h5>
+
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 text-center bg-dark text-white">
+                <img src="./mark.jpg" class="card-img-top img-fluid" alt="Consulting Services">
+                <div class="card-body">
+                    <h5 class="card-title">Consulting Services</h5>
+                    <p class="card-text">Our consulting services provide insightful analysis and strategic direction to help your business thrive in a competitive marketplace.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 text-center bg-dark text-white">
+                <img src="./jak.jpg" class="card-img-top img-fluid" alt="Technology Solutions">
+                <div class="card-body">
+                    <h5 class="card-title">Technology Solutions</h5>
+                    <p class="card-text">We offer a range of technology solutions designed to enhance operational efficiency and drive growth through innovation.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 text-center bg-dark text-white">
+                <img src="./yafa.jpg" class="card-img-top img-fluid" alt="Training Programs">
+                <div class="card-body">
+                    <h5 class="card-title">Training Programs</h5>
+                    <p class="card-text">Our training programs equip your team with the skills and knowledge necessary to excel in their roles and foster a culture of continuous improvement.</p>
+                </div>
             </div>
         </div>
     </div>
-</footer>  
+</div>
+
+<!-- ================= Footer ================= -->
+<footer class="bg-dark text-white pt-5 pb-3 mt-5">
+    <div class="container text-center mb-4">
+        <h2>Ready to Maximize Your Productivity?</h2>
+        <p>Join thousands of users achieving ultimate focus today.</p>
+        <button class="btn btn-light">Start Your Free Trial</button>
+    </div>
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+        <div>
+            <p class="mb-0">Lam © 2024. All Rights Reserved.</p>
+        </div>
+        <div>
+            <a href="URL_X" class="text-white me-3">X (Twitter)</a>
+            <a href="URL_LinkedIn" class="text-white me-3">LinkedIn</a>
+            <a href="mailto:info@lam.com" class="text-white me-3">Contact Us</a>
+            <a href="/privacy" class="text-white me-3">Privacy Policy</a>
+            <a href="/terms" class="text-white">Terms of Use</a>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
