@@ -1,89 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Lam - Contact Us</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lam - Contact Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* تنسيق عام */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    /* ===== Navbar ===== */
+    nav.nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav .img1 img {
+      border-radius: 8px;
+    }
+
+    .itemlists {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .itemlists a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .itemlists a:hover {
+      color: #0d6efd; /* أزرق أنيق عند المرور */
+    }
+
+    .button button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button button:hover {
+      background-color: #333;
+    }
+
+    .button a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* ===== Contact Page ===== */
+    .contact-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    }
+
+    .contact-hero h1 {
+      font-size: 2.5rem;
+      color: #222;
+    }
+
+    .contact-hero p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: #555;
+    }
+
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+      padding: 40px 20px;
+    }
+
+    .contact-form-wrapper,
+    .contact-info {
+      background-color: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      flex: 1 1 350px;
+      max-width: 500px;
+    }
+
+    .contact-form label {
+      display: block;
+      margin-top: 10px;
+      font-weight: 500;
+      color: #333;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      margin-top: 5px;
+      font-size: 1rem;
+    }
+
+    .send-button {
+      margin-top: 15px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .send-button:hover {
+      background-color: #333;
+    }
+
+    .contact-info h3 {
+      margin-top: 15px;
+      color: #0d6efd;
+    }
+
+    .contact-info a {
+      color: black;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      text-decoration: underline;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itemlists {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav class="nav">
-            <div class="img1">
-                <img src="./logo.jpg" alt="Lam Logo" height="60px" width="70px">
-            </div>
-            <ul class="itemlists">
-                <li> <a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./services.html"> Services</a></li>
-            </ul>
-            <div class="button">
-                <div class="button">
-             <button><a href="login.html">Login</a></button>
+
+  <header>
+    <nav class="nav">
+      <div class="img1">
+        <img src="./logo.jpg" alt="Lam Logo" height="60px" width="70px">
+      </div>
+
+      <ul class="itemlists">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./services.html">Services</a></li>
+      </ul>
+
+      <div class="button">
+        <button><a href="login.html">Login</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="contact-page-main">
+    <section class="contact-hero">
+      <h1 >We'd Love to Hear From You</h1>
+      <p>Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.</p>
+    </section>
+
+    <section class="contact-container">
+
+      <div class="contact-form-wrapper">
+        <h2>Send us a message</h2>
+        <form class="contact-form">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="name@example.com">
+
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" name="subject" required placeholder="Briefly describe your request">
+
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
+
+          <button type="submit" class="send-button">Send Message</button>
+        </form>
+      </div>
+
+      <div class="contact-info">
+        <h2>Direct Contact Info</h2>
+
+        <div class="info-item">
+          <h3>Email Support</h3>
+          <p>Our friendly support team is here to help you.</p>
+          <a href="mailto:support@lam.com">support@lam.com</a>
         </div>
-            </div>
-        </nav>
-    </header>
 
-    <main class="contact-page-main">
-        <section class="contact-hero">
-            <h1>We'd Love to Hear From You</h1>
-            <p>Whether you have a question about features, pricing, or anything else, our team is ready to answer all your questions.</p>
-        </section>
+        <div class="info-item">
+          <h3>Phone</h3>
+          <p>Mon-Fri from 9am to 5pm (GMT+3)</p>
+          <a href="tel:+967770000000">+967 770 000 000</a>
+        </div>
 
-        <section class="contact-container">
-            
-            <div class="contact-form-wrapper">
-                <h2>Send us a message</h2>
-                <form  class="contact-form">
-                    
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
+        <div class="info-item">
+          <h3>Our Office</h3>
+          <p>Lam Tech Solutions, Street 123, Sana'a, Yemen</p>
+          <a href="#">View on Map</a>
+        </div>
 
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" name="email" required placeholder="name@example.com">
+        <div class="social-links">
+          <h3>Follow Us</h3>
+          <a href="#" target="_blank">X (Twitter)</a> |
+          <a href="#" target="_blank">LinkedIn</a>
+        </div>
+      </div>
 
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" name="subject" required placeholder="Briefly describe your request">
+    </section>
+  </main>
 
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us how we can help..."></textarea>
-                    <br>
-                    <button type="submit" class="send-button">Send Message</button>
-                </form>
-            </div>
-
-            <div class="contact-info">
-                <h2>Direct Contact Info</h2>
-                
-                <div class="info-item">
-                    <h3>Email Support</h3>
-                    <p>Our friendly support team is here to help you.</p>
-                    <a href="mailto:support@lam.com">support@lam.com</a>
-                </div>
-
-                <div class="info-item">
-                    <h3>Phone</h3>
-                    <p>Mon-Fri from 9am to 5pm (GMT+3)</p>
-                    <a href="tel:+967770000000">+967 770 000 000</a>
-                </div>
-
-                <div class="info-item">
-                    <h3>Our Office</h3>
-                    <p>Lam Tech Solutions, Street 123, Sana'a, Yemen</p>
-                    <a href="#">View on Map</a>
-                </div>
-                
-                <div class="social-links">
-                    <h3>Follow Us</h3>
-                    <a href="URL_X" target="_blank">X (Twitter)</a>
-                    <a href="URL_LinkedIn" target="_blank">LinkedIn</a>
-                </div>
-            </div>
-
-        </section>
-    </main>
-    
-    </body>
+</body>
 </html>
