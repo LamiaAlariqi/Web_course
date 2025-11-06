@@ -1,106 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Lam - Services</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lam - Services</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f8f9fa;
+    }
+
+    nav.nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 50px;
+      background-color: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .nav .img1 img {
+      border-radius: 8px;
+    }
+
+    .itemlists {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .itemlists a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .itemlists a:hover {
+      color: #0d6efd;
+    }
+
+    .button button {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .button button:hover {
+      background-color: #333;
+    }
+
+    .button a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .services-hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: linear-gradient(135deg, #dfe9f3, #ffffff);
+    }
+
+    .services-hero h1 {
+      font-size: 2.3rem;
+      color: #222;
+    }
+
+    .services-hero p {
+      max-width: 600px;
+      margin: 10px auto;
+      color: #555;
+    }
+
+    .services-grid-section {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      padding: 40px 60px;
+    }
+
+    .service-card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    .service-card .icon {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card h3 {
+      color: #0d6efd;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #555;
+    }
+
+    .service-link {
+      display: inline-block;
+      margin-top: 10px;
+      color: black;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .service-link:hover {
+      color: #0d6efd;
+    }
+
+    .pricing-section {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .pricing-section h2 {
+      font-size: 2rem;
+      color: #222;
+      margin-bottom: 40px;
+    }
+
+    .pricing-table {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .pricing-plan {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 30px 25px;
+      max-width: 300px;
+      flex: 1 1 280px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .pricing-plan:hover {
+      transform: translateY(-8px);
+    }
+
+    .pricing-plan h3 {
+      color: #0d6efd;
+    }
+
+    .price {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .price span {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .pricing-plan ul {
+      list-style: none;
+      padding: 0;
+      margin-top: 15px;
+      color: #555;
+      text-align: left;
+    }
+
+    .pricing-plan li {
+      margin-bottom: 8px;
+    }
+
+    .plan-button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: background-color 0.3s ease;
+    }
+
+    .primary-btn {
+      background-color: black;
+      color: white;
+    }
+
+    .primary-btn:hover {
+      background-color: #333;
+    }
+
+    .secondary-btn {
+      background-color: #e9ecef;
+      color: black;
+    }
+
+    .secondary-btn:hover {
+      background-color: #d6d6d6;
+    }
+
+    .pro-plan {
+      border: 2px solid #0d6efd;
+    }
+
+    @media (max-width: 768px) {
+      nav.nav {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .itemlists {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 15px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <nav class="nav">
-            <div class="img1">
-                <img src="./logo.jpg" alt="Lam Logo" height="60px" width="70px">
-            </div>
-            <ul class="itemlists">
-                <li> <a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">Contact Us</a></li>
-                <li><a href="./services.html"> Services</a></li>
-            </ul>
-            <div class="button">
-                <div class="button">
-            <button><a href="login.html">Login</a></button>
+  <header>
+    <nav class="nav">
+      <div class="img1">
+        <img src="./logo.jpg" alt="Lam Logo" height="60px" width="70px">
+      </div>
+      <ul class="itemlists">
+        <li><a href="./home.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact Us</a></li>
+        <li><a href="./services.html">Services</a></li>
+      </ul>
+      <div class="button">
+        <button><a href="login.html">Login</a></button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="services-page-main">
+    <section class="services-hero">
+      <h1>Innovative Solutions for Modern Productivity</h1>
+      <p>Our tools are designed to eliminate distractions and supercharge your focus, allowing you to achieve more in less time.</p>
+    </section>
+
+    <section class="services-grid-section">
+      <div class="service-card">
+        <div class="icon">💻</div>
+        <h3>The Focus Tracker Pro</h3>
+        <p>Advanced time-blocking and distraction monitoring software for deep work sessions.</p>
+        <a href="#" class="service-link">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">🎧</div>
+        <h3>Zen Soundscapes</h3>
+        <p>Curated ambient sound libraries and white noise generation for enhanced concentration.</p>
+        <a href="#" class="service-link">Learn More →</a>
+      </div>
+
+      <div class="service-card">
+        <div class="icon">📈</div>
+        <h3>Productivity Analytics</h3>
+        <p>Detailed reports and visualizations of your workflow to pinpoint where your time goes.</p>
+        <a href="#" class="service-link">Learn More →</a>
+      </div>
+    </section>
+
+    <section class="pricing-section">
+      <h2>Choose the Plan That Fits Your Flow</h2>
+      <div class="pricing-table">
+        <div class="pricing-plan">
+          <h3>Basic</h3>
+          <p class="price">$0<span>/month</span></p>
+          <ul>
+            <li> Core Tracker Features</li>
+            <li> Limited Sound Library</li>
+            <li> Team Collaboration</li>
+            <li> Advanced Analytics</li>
+          </ul>
+          <button class="plan-button secondary-btn">Start Free</button>
         </div>
-            </div>
-        </nav>
-    </header>
 
-    <main class="services-page-main">
-        
-        <section class="services-hero">
-            <h1>Innovative Solutions for Modern Productivity</h1>
-            <p>Our tools are designed to eliminate distractions and supercharge your focus, allowing you to achieve more in less time.</p>
-        </section>
+        <div class="pricing-plan pro-plan">
+          <h3>Pro</h3>
+          <p class="price">$12<span>/month</span></p>
+          <ul>
+            <li> Everything in Basic</li>
+            <li> Full Soundscapes Access</li>
+            <li> Advanced Analytics</li>
+            <li> Priority Support</li>
+          </ul>
+          <button class="plan-button primary-btn">Start Pro Trial</button>
+        </div>
 
-        <section class="services-grid-section">
-            <div class="service-card">
-                <div class="icon">💻</div>
-                <h3>The Focus Tracker Pro</h3>
-                <p>Advanced time-blocking and distraction monitoring software for deep work sessions.</p>
-                <a href="#" class="service-link">Learn More →</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="icon">🎧</div>
-                <h3>Zen Soundscapes</h3>
-                <p>Curated ambient sound libraries and white noise generation for enhanced concentration.</p>
-                <a href="#" class="service-link">Learn More →</a>
-            </div>
-            
-            <div class="service-card">
-                <div class="icon">📈</div>
-                <h3>Productivity Analytics</h3>
-                <p>Detailed reports and visualizations of your workflow to pinpoint where your time goes.</p>
-                <a href="#" class="service-link">Learn More →</a>
-            </div>
-        </section>
-
-        <section class="pricing-section">
-            <h2>Choose the Plan That Fits Your Flow</h2>
-            
-            <div class="pricing-table">
-                
-                <div class="pricing-plan">
-                    <h3>Basic</h3>
-                    <p class="price">$0<span>/month</span></p>
-                    <ul>
-                        <li>✅ Core Tracker Features</li>
-                        <li>✅ Limited Sound Library</li>
-                        <li>❌ Team Collaboration</li>
-                        <li>❌ Advanced Analytics</li>
-                    </ul>
-                    <button class="plan-button secondary-btn">Start Free</button>
-                </div>
-                
-                <div class="pricing-plan pro-plan">
-                  
-                    <h3>Pro</h3>
-                    <p class="price">$12<span>/month</span></p>
-                    <ul>
-                        <li>✅ **Everything in Basic**</li>
-                        <li>✅ Full Soundscapes Access</li>
-                        <li>✅ Advanced Analytics</li>
-                        <li>✅ Priority Support</li>
-                    </ul>
-                    <button class="plan-button primary-btn">Start Pro Trial</button>
-                </div>
-                
-                <div class="pricing-plan ">
-                    <h3>Enterprise</h3>
-                    <p class="price">Contact Us</p>
-                    <ul>
-                        <li>✅ Everything in Pro</li>
-                        <li>✅ Team Collaboration Tools</li>
-                        <li>✅ Dedicated Account Manager</li>
-                        <li>✅ Custom Integrations</li>
-                    </ul>
-                    <button class="plan-button secondary-btn">Get a Quote</button>
-                </div>
-            </div>
-        </section>
-        
-    </main>
-    
-    </body>
-</html>
+        <div class="pricing-plan">
+          <h3>Enterprise</h3>
+          <p class="price">Contact Us</p>
+          <ul>
+            <li> Everything in Pro</li>
+            <li> Team Collaboration Tools</li>
+            <li> Dedicated Account Manager</li>
+            <li> Custom Integrations</li>
+          </ul>
+          <button class="plan-button secondary-btn">Get a Quote</button>
+        </div>
+      </div>
+    </section>
