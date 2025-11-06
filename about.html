@@ -1,89 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <title>Lam</title>
-</head>
-<body>
-    <!------------------------head--------------------------------- -->
-    <header >
-    <nav class="nav">
-        <div class="img1">
-            <img src="./logo.jpg" height="60px" width="70px">
-        </div>
-            <ul class="itemlists">
-                <li> <a href="./home.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./contact.html">contact Us</a></li>
-                <li><a href="./services.html"> Services</a></li>
-            </ul>
-       
-        <div class="button">
-            <div class="button">
-             <button><a href="login.html">Login</a></button>
-        </div>
-        </div>
-    </nav>
-     </header>
-     <main class="about-page-main">
-        
-        <section class="foundation-story">
-            <div class="defination">
-                <h1>Our Story: Focus Flow</h1>
-                <p>
-                    Lam was founded in 2021 by two engineers who were tired of digital distractions. Their mission was simple: to create tools that bring clarity and focus back to the modern workflow. Our commitment to **minimalism and user-centric design** has driven our growth and success since day one.
-                </p>
-                <div class="milestones">
-                    <h3>Key Milestones</h3>
-                    <p>Over the years, we achieved significant milestones, including surpassing 50,000 users and securing our first major innovation award in 2023. Each achievement reflects our dedication to quality and service.</p>
-                </div>
-            </div>
-            <img src="./team.jpg" class="team-image" alt="Lam team working together" height="350px">
-        </section>
-        <section class="achievements-numbers">
-            <h2>Lam By The Numbers</h2>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <p class="number">50,000+</p>
-                    <p class="label">Satisfied Users</p>
-                </div>
-                <div class="stat-item">
-                    <p class="number">10M+</p>
-                    <p class="label">Minutes of Focus Tracked</p>
-                </div>
-                <div class="stat-item">
-                    <p class="number">99.9%</p>
-                    <p class="label">Uptime Reliability</p>
-                </div>
-            </div>
-        </section>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lam</title>
 
-    </main>
-     <footer class="modern-footer">
-        <div class="pre-footer-cta">
-            <h2 class="cta-headline">Ready to Maximize Your Productivity?</h2>
-            <p class="cta-subtext">Join thousands of users achieving ultimate focus today.</p>
-            <button class="cta-button">Start Your Free Trial</button>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body class="bg-light">
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-3">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="./logo.jpg" alt="Logo" width="60" height="50" class="me-2 rounded" />
+        Lam
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="./home.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="./about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="./contact.html">Contact Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="./services.html">Services</a></li>
+        </ul>
+      </div>
+
+      <a href="login.html" class="btn btn-outline-light ms-lg-3 mt-2 mt-lg-0">Login</a>
+    </div>
+  </nav>
+
+  <!-- ✅ Main Content -->
+  <main class="container my-5">
+    <section class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h1 class="fw-bold">Our Story: Focus Flow</h1>
+        <p class="lead">
+          Lam was founded in 2021 by two engineers who were tired of digital distractions.
+          Their mission was simple: to create tools that bring clarity and focus back to the modern workflow.
+          Our commitment to <strong>minimalism and user-centric design</strong> has driven our growth and success since day one.
+        </p>
+        <div class="mt-4">
+          <h3>Key Milestones</h3>
+          <p>
+            Over the years, we achieved significant milestones, including surpassing 50,000 users and
+            securing our first major innovation award in 2023.
+            Each achievement reflects our dedication to quality and service.
+          </p>
         </div>
-        <div class="base-footer">
-            <div class="footer-brand">
-                <p class="logo-text">Lam</p>
-                <p class="copyright">© 2024 Lam. All Rights Reserved.</p>
-            </div>
-            <div class="footer-utilities">
-                <div class="social-icons">
-                    <a href="URL_X" target="_blank">X (Twitter)</a>
-                    <a href="URL_LinkedIn" target="_blank">LinkedIn</a>
-                    <a href="mailto:info@lam.com">Contact Us</a>
-                </div>
-                <div class="legal-links">
-                    <a href="/privacy">Privacy Policy</a>
-                    <span class="separator">|</span>
-                    <a href="/terms">Terms of Use</a>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-6 text-center mt-4 mt-lg-0">
+        <img src="./team.jpg" alt="Lam Team" class="img-fluid rounded shadow-sm" style="max-height: 350px; object-fit: cover;">
+      </div>
+    </section>
+
+    <section class="text-center">
+      <h2 class="fw-bold mb-4">Lam By The Numbers</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="p-4 border rounded bg-white shadow-sm">
+            <p class="fs-2 fw-bold text-primary">50,000+</p>
+            <p class="mb-0">Satisfied Users</p>
+          </div>
         </div>
-    </footer>
-     </body>
+        <div class="col-md-4">
+          <div class="p-4 border rounded bg-white shadow-sm">
+            <p class="fs-2 fw-bold text-primary">10M+</p>
+            <p class="mb-0">Minutes of Focus Tracked</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="p-4 border rounded bg-white shadow-sm">
+            <p class="fs-2 fw-bold text-primary">99.9%</p>
+            <p class="mb-0">Uptime Reliability</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ✅ Footer -->
+  <footer class="bg-dark text-white mt-5 pt-5">
+    <div class="text-center mb-5">
+      <h2>Ready to Maximize Your Productivity?</h2>
+      <p>Join thousands of users achieving ultimate focus today.</p>
+      <button class="btn btn-outline-light">Start Your Free Trial</button>
+    </div>
+
+    <div class="container border-top border-light pt-4 pb-3">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <p class="mb-0 fw-bold">Lam</p>
+          <p class="small mb-0">© 2024 Lam. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-6 text-md-end text-center mt-3 mt-md-0">
+          <a href="#" class="text-white text-decoration-none me-3">Twitter</a>
+          <a href="#" class="text-white text-decoration-none me-3">LinkedIn</a>
+          <a href="mailto:info@lam.com" class="text-white text-decoration-none me-3">Contact</a>
+          <a href="#" class="text-white text-decoration-none">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
